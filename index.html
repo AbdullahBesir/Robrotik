@@ -1,14 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robrotik</title>
+
+  <!-- Bootstrap CSS (navbar için) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-3EQ8lCir0ZIye6FLf4HXDjxmCRRMWOAhS+1ALrbr7vjLEZ14hIC0rQdrCt0voDzs" crossorigin="anonymous">
+
+  <!-- Font Awesome (ikonlar için) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-pZVbRRNuMmNyQ/PqkX4qdC2T+XhuPf4nvdhyzdmvw++nQ+xFGrG0R15DcyBbY0b2U2s4KF0I8dEhE0I/+mNyEg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Proje CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <script src="style.js"></script>
-    <nav class="navbar navbar-expand-custom navbar-mainbg">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item active"><a class="nav-link" href="#">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Address Book</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Components</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Charts</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Documents</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <canvas id="bg"></canvas>
+
+  <!-- jQuery (style.js jQuery kodu için) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-3gJwYpMe3QewGELvnaYzS0RT6w3m4NnEkBu0k7uH60=" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap 5 bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-8rJo0w0Z3p8R4fZkZVdJW4kgYVmF+4483zjfmgGqj9/3TNQ4xiUgHjld0m1qI25q" crossorigin="anonymous"></script>
+
+  <!-- Proje JS -->
+  <script src="style.js"></script>
+</body>
+</html>
         <a class="navbar-brand navbar-logo" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars text-white"></i>
