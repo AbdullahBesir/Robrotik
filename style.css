@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background: radial-gradient(
+      1200px 600px at 20% 20%,
+      rgba(56, 189, 248, 0.1),
+      transparent 60%
+    ),
+    radial-gradient(
+      1000px 500px at 80% 30%,
+      rgba(124, 58, 237, 0.1),
+      transparent 60%
+    ),
+    #0b1220;
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, "Inter", Roboto, sans-serif;
+  overflow: hidden; /* full-screen canvas */
+}
+
+/* Fullscreen canvas behind content */
+#bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
+
+/* Minimal overlay UI */
