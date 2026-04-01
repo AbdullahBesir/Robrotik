@@ -203,31 +203,36 @@ for (let i = 0; i < 120; i++) particles.push(new Particle()); // seed; va fi aju
 computeParticlesCount();
 loop();
 function test(){
-	var tabsNewAnim = $('#navbarSupportedContent');
-	var selectorNewAnim = $('#navbarSupportedContent').find('li').length;
-	var activeItemNewAnim = tabsNewAnim.find('.active');
-	var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
-	var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
-	var itemPosNewAnimTop = activeItemNewAnim.position();
-	var itemPosNewAnimLeft = activeItemNewAnim.position();
-	$(".hori-selector").css({
-		"top":itemPosNewAnimTop.top + "px", 
-		"left":itemPosNewAnimLeft.left + "px",
-		"height": activeWidthNewAnimHeight + "px",
-		"width": activeWidthNewAnimWidth + "px"
+	if (typeof $ === 'undefined') return;
+	var $nav = $('#navbarSupportedContent');
+	var $selector = $('#navbarSupportedContent').find('li');
+	var $activeItem = $selector.filter('.active').first();
+
+	if (!$nav.length || !$selector.length || !$activeItem.length || !$('.hori-selector').length) {
+		return;
+	}
+
+	var activeHeight = $activeItem.innerHeight();
+	var activeWidth = $activeItem.innerWidth();
+	var itemPos = $activeItem.position();
+	$('.hori-selector').css({
+		'top': itemPos.top + 'px',
+		'left': itemPos.left + 'px',
+		'height': activeHeight + 'px',
+		'width': activeWidth + 'px'
 	});
-	$("#navbarSupportedContent").on("click","li",function(e){
-		$('#navbarSupportedContent ul li').removeClass("active");
+
+	$nav.on('click', 'li', function(e){
+		$('#navbarSupportedContent ul li').removeClass('active');
 		$(this).addClass('active');
-		var activeWidthNewAnimHeight = $(this).innerHeight();
-		var activeWidthNewAnimWidth = $(this).innerWidth();
-		var itemPosNewAnimTop = $(this).position();
-		var itemPosNewAnimLeft = $(this).position();
-		$(".hori-selector").css({
-			"top":itemPosNewAnimTop.top + "px", 
-			"left":itemPosNewAnimLeft.left + "px",
-			"height": activeWidthNewAnimHeight + "px",
-			"width": activeWidthNewAnimWidth + "px"
+		var activeHeight = $(this).innerHeight();
+		var activeWidth = $(this).innerWidth();
+		var itemPos = $(this).position();
+		$('.hori-selector').css({
+			'top': itemPos.top + 'px',
+			'left': itemPos.left + 'px',
+			'height': activeHeight + 'px',
+			'width': activeWidth + 'px'
 		});
 	});
 }
